@@ -61,7 +61,7 @@ int	main(int argc, char **argv)
 		return (0);
 	if (ft_strlen(argv[1]) == 1)
 	{
-		display_error(-2);
+		display_error(-1);
 		return (0);
 	}
 	pid = ft_atoi(argv[1]);
