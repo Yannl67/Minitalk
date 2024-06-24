@@ -32,10 +32,8 @@ static void	ft_send_str_to_binary(int pid, unsigned char *str)
 {
 	int		bit;
 	int		i;
-	int		j;
 
 	i = 0;
-	j = 0;
 	while (str[i])
 	{
 		bit = 7;
@@ -47,7 +45,6 @@ static void	ft_send_str_to_binary(int pid, unsigned char *str)
 				kill(pid, SIGUSR2);
 			usleep(500);
 			bit--;
-			j++;
 		}
 		i++;
 	}
@@ -63,7 +60,7 @@ int	main(int argc, char **argv)
 	if (!ft_check_args(argc, argv))
 		return (0);
 	if (ft_strlen(argv[1]) == 1)
-	{	
+	{
 		display_error(-2);
 		return (0);
 	}

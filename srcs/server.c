@@ -85,7 +85,7 @@ static void	ft_signal_receiver(int signum, siginfo_t *info, void *context)
 		if (c == '\0')
 			print_message();
 		else
-			append_char(c);	
+			append_char(c);
 		bit = 7;
 		c = 0;
 	}
