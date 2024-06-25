@@ -64,6 +64,11 @@ int	main(int argc, char **argv)
 		display_error(-1);
 		return (0);
 	}
+	if (argv[1][0] == '\0')
+	{
+		display_error(-1);
+		return (0);
+	}
 	pid = ft_atoi(argv[1]);
 	str = (unsigned char *)argv[2];
 	ft_send_str_to_binary(pid, str);
