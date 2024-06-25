@@ -39,7 +39,7 @@ static int	ft_check_only_digits(char *str)
 	{
 		if (!ft_isdigit(str[i]))
 			return (0);
-		if (str[i] == 0 && str[i + 1] == '\0')
+		else if (str[i] == '0' && str[i + 1] == '\0')
 			return (0);
 		i++;
 	}
