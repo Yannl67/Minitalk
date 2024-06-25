@@ -23,7 +23,7 @@ static void	ft_send_terminated_string(int pid)
 			kill(pid, SIGUSR1);
 		else
 			kill(pid, SIGUSR2);
-		usleep(500);
+		usleep(1000);
 		bit--;
 	}
 }
@@ -43,7 +43,7 @@ static void	ft_send_str_to_binary(int pid, unsigned char *str)
 				kill(pid, SIGUSR1);
 			else
 				kill(pid, SIGUSR2);
-			usleep(500);
+			usleep(1000);
 			bit--;
 		}
 		i++;
